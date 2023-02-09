@@ -91,10 +91,10 @@ function updateScene(uiState, scene_config) {
 }
 
 // load a new scene basemap (first creating the leaflet and tangram layers if needed)
-function loadScene({ basemapScene, token }) {
+function loadScene({ basemapScene }) {
   // token is used for XYZ space and basemap tiles
   // defaults to initial placeholder access token if needed, replaced after space has loaded
-  basemapScene.global.xyz_access_token = token || 'Qz2TvilK6PhGZSu9K-yGkA';
+  basemapScene.global.xyz_access_token = 'Qz2TvilK6PhGZSu9K-yGkA';
   basemapScene.global.sdk_api_key = 'DpCrhQqsR2igQPEINRTfcw'; // default Nextzen API key for terrain tiles
 
   if (layer == null) {
@@ -238,7 +238,7 @@ function makeLayer(scene_obj) {
 }
 function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clusteringProp, quadRez, quadCountmode, voronoi, delaunay } = {}, propertySearchQueryParams, basemap, hexbinInfo, gisInfo, projection }, scene_config) {
 
-  if (spaceId && token) {
+  if (spaceId) {
     // choose main space, or hexbins space
     var activeSpaceId 
     var toggles = appUI.get().displayToggles
@@ -287,7 +287,6 @@ function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clu
       type: 'GeoJSON',
       url: `http://localhost:8080/hub/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
       url_params: {
-        access_token: token,
         clip: true
       }      
     };
@@ -583,7 +582,7 @@ async function getStats({ spaceId, token, mapStartLocation }) {
   console.log(spaceInfo)
   // var tokenURL = `https://xyz.api.here.com/token-api/tokens/${token}`;
   // const tokenInfo = await fetch(tokenURL).then((response) => response.json());
-  var tokenCapabilities = {"hexbinClustering": false, "quadClustering": false}
+  var tokenCapabilities = {"hexbinClustering": true, "quadClustering": true}
   // tokenCapabilities = 
   //   (tokenInfo.urm['xyz-hub'].useCapabilities || [])
   //     .reduce((props, p) => {
