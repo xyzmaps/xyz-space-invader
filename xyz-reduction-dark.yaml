@@ -188,14 +188,13 @@ scene:
         color: [0.149,0.149,0.149]
 
 sources:
-    # mapzen:
-    #     type: MVT
-    #     # url:  https://tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt
-    #     url: https://xyz.api.here.com/tiles/osmbase/512/all/{z}/{x}/{y}.mvt
-    #     url_params:
-    #         api_key: JJiaZE63TZObzPrmx0TQkw
-    #     tile_size: 512
-    #     max_zoom: 16
+    mapzen:
+        type: MVT
+        url:  https://tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt
+        url_params:
+            api_key: global.sdk_api_key
+        tile_size: 512
+        max_zoom: 16
 
 #     mapzen:
 #         type: MVT
@@ -213,9 +212,6 @@ sources:
 #         tile_size: 512
 #         max_zoom: 15
 
-    mapzen:
-        type: MVT
-        url: https://xyz.api.here.com/tiles/osmbase/512/all/{z}/{x}/{y}.mvt
 
 layers:
 # we should be able to add the style: _... on the fly in js

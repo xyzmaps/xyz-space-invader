@@ -69,9 +69,9 @@ const xyzTangramBaseScene = addBasePath('tangram_xyz_scene.yaml');
 const xyzTilezenSourceOverride = {
   sources: {
     mapzen: {
-      url: 'https://xyz.api.here.com/tiles/osmbase/512/all/{z}/{x}/{y}.mvt',
+      url: 'https://tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt',
       url_params: {
-        'access_token': 'global.xyz_access_token'
+        'api_key': 'global.sdk_api_key'
       }
     }
   }
@@ -318,17 +318,6 @@ export const basemaps = {
         color: [0, 0, 0]
       }
     }
-  },
-  'satellite': {
-    import: [
-      'https://www.nextzen.org/carto/refill-style/refill-style.zip',
-      xyzTangramBaseScene,
-      addBasePath('satellite.yaml'),
-    ],
-    global: {
-      featureLabelFont: labelFontPresets.dark
-    },
-    ...xyzTilezenSourceOverride
   },
 };
 

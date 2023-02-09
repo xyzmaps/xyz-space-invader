@@ -35529,9 +35529,9 @@
 	const xyzTilezenSourceOverride = {
 	  sources: {
 	    mapzen: {
-	      url: 'https://xyz.api.here.com/tiles/osmbase/512/all/{z}/{x}/{y}.mvt',
+	      url: 'https://tile.nextzen.org/tilezen/vector/v1/512/all/{z}/{x}/{y}.mvt',
 	      url_params: {
-	        'access_token': 'global.xyz_access_token'
+	        'api_key': 'global.sdk_api_key'
 	      }
 	    }
 	  }
@@ -35778,17 +35778,6 @@
 	        color: [0, 0, 0]
 	      }
 	    }
-	  },
-	  'satellite': {
-	    import: [
-	      'https://www.nextzen.org/carto/refill-style/refill-style.zip',
-	      xyzTangramBaseScene,
-	      addBasePath('satellite.yaml'),
-	    ],
-	    global: {
-	      featureLabelFont: labelFontPresets.dark
-	    },
-	    ...xyzTilezenSourceOverride
 	  },
 	};
 
@@ -44554,7 +44543,7 @@
 	  layer = Tangram.leafletLayer({
 	    scene: scene_obj,
 	    leaflet: leafletSrc,
-	    attribution: '<a href="https://github.com/tangrams/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://explore.xyz.here.com/">HERE XYZ</a>',
+	    attribution: '<a href="https://github.com/tangrams/tangram" target="_blank">Tangram</a> | &copy; OSM contributors | <a href="https://github.com/xyzmaps">XYZ Maps</a>',
 	    events: {
 	      hover: ({ feature, leaflet_event: { latlng }, changed }) => {
 	        // preview feature via hover, currently NOT synced to app UI
@@ -44992,15 +44981,7 @@
 	  var spaceURL = `http://localhost:8080/hub/spaces/${spaceId}?`;
 	  const spaceInfo = await fetch(spaceURL).then((response) => response.json());
 	  console.log(spaceInfo);
-	  // var tokenURL = `https://xyz.api.here.com/token-api/tokens/${token}`;
-	  // const tokenInfo = await fetch(tokenURL).then((response) => response.json());
 	  var tokenCapabilities = {"hexbinClustering": true, "quadClustering": true};
-	  // tokenCapabilities = 
-	  //   (tokenInfo.urm['xyz-hub'].useCapabilities || [])
-	  //     .reduce((props, p) => {
-	  //       props[p.id] = true;
-	  //       return props;
-	  //     }, {});
 	     
 	  console.log("token has", tokenCapabilities);
 	  
