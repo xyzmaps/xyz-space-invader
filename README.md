@@ -58,5 +58,3 @@ Tags are a powerful feature of XYZ Spaces, and are especially useful with large 
 
 - the first time: `npm install`
 - then `npm start` afterwards
-
-Netlify will automatically generate this if you make a branch in this repo.
