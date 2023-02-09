@@ -1,8 +1,8 @@
 # 👾 XYZ Space Invader 👾
 
-XYZ Space Invader is a [HERE XYZ](https://here.xyz) Space and tag visualization and exploration tool. It lets you slice and dice data in an XYZ Space so you can figure out what's going on in your geodata, and quickly make a nice looking map that you can share with your friends.
+XYZ Space Invader is an [XYZ Maps](https://github.com/xyzmaps) Space and tag visualization and exploration tool. It lets you slice and dice data in an XYZ Space so you can figure out what's going on in your geodata, and quickly make a nice looking map that you can share with your friends.
 
-It can be invoked from the [HERE CLI](https://www.here.xyz/cli/) using `here xyz show SPACEID -v`. The URL maintains the current view state, making it easy to share your map.
+It can be invoked from the [XYZ CLI](https://github.com/xyzmaps/xyz-cli) using `xyzmaps space show SPACEID -v`. The URL maintains the current view state, making it easy to share your map.
 
 It uses [tangram.js](https://github.com/tangrams/tangram) to display, filter, and analyze XYZ spaces, large or small. You can list tags in use, filter by them, and analyze features by property value. Have 100 million features? You can use tags to pull out and view specific data so your laptop fan doesn't get sad. 
 
