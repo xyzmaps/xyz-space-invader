@@ -285,7 +285,7 @@ function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clu
     scene_config.sources = scene_config.sources || {};
     scene_config.sources._xyzspace = {
       type: 'GeoJSON',
-      url: `https://xyz.api.here.com/hub/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
+      url: `http://localhost:8080/hub/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
       url_params: {
         access_token: token,
         clip: true
@@ -438,7 +438,7 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
     }
     else if (currentZoom > hexbinZoomMax) {
       // when you zoom in past hexbinZoomMax, maybe we want show the raw points? but showing hexbinZoomMax right now
-//       scene_config.sources._xyzspace.url = `https://xyz.api.here.com/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
 //       activeTags = tagFilterQueryParam;
       activeTags = 'zoom' + hexbinZoomMax + '_hexbin';
 
@@ -446,7 +446,7 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
     }
     else if (currentZoom < hexbinZoomMin) {
       // what should we do when we zoom out beyond the hexbinZoomMin? imagine 10 million points. show hexbinZoomMin for now
-//       scene_config.sources._xyzspace.url = `https://xyz.api.here.com/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
       activeTags = 'zoom' + hexbinZoomMin + '_hexbin'; // if in hexbin mode and zoomed way out, show what we've got
       console.log("beyond hexbin range, showing widest")
     }
@@ -466,13 +466,13 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
     }
     else if (overZoom > hexbinZoomMax) {
       // when you zoom in past hexbinZoomMax, switch from centroids to raw points, need to switch back to original space (is this the best way?)
-      scene_config.sources._xyzspace.url = `https://xyz.api.here.com/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+      scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
       activeTags = tagFilterQueryParam;
       console.log(overZoom,">",hexbinZoomMax);
     }
     else if (overZoom < hexbinZoomMin) {
       // what should we do when we zoom out beyond the hexbinZoomMin? imagine 10 million points. show hexbinZoomMin for now
-//       scene_config.sources._xyzspace.url = `https://xyz.api.here.com/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
       activeTags = 'zoom' + hexbinZoomMin + '_centroid'; // if in hexbin mode and zoomed way out, show what we've got
       console.log("beyond hexbin range, showing widest")
     }
@@ -492,7 +492,7 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
 
 async function getStats({ spaceId, token, mapStartLocation }) {
   // Get stats endpoint
-  var url = `https://xyz.api.here.com/hub/spaces/${spaceId}/statistics?access_token=${token}`;
+  var url = `http://localhost:8080/hub/spaces/${spaceId}/statistics`;
   const stats = await fetch(url).then(r => r.json());
     // console.log(stats)
   if (stats.type == 'ErrorResponse'){
@@ -578,18 +578,18 @@ async function getStats({ spaceId, token, mapStartLocation }) {
       }, {});
 
   // Get space endpoint
-  var spaceURL = `https://xyz.api.here.com/hub/spaces/${spaceId}?access_token=${token}`;
+  var spaceURL = `http://localhost:8080/hub/spaces/${spaceId}?`;
   const spaceInfo = await fetch(spaceURL).then((response) => response.json());
   console.log(spaceInfo)
-  var tokenURL = `https://xyz.api.here.com/token-api/tokens/${token}`;
-  const tokenInfo = await fetch(tokenURL).then((response) => response.json());
+  // var tokenURL = `https://xyz.api.here.com/token-api/tokens/${token}`;
+  // const tokenInfo = await fetch(tokenURL).then((response) => response.json());
   var tokenCapabilities = {"hexbinClustering": false, "quadClustering": false}
-  tokenCapabilities = 
-    (tokenInfo.urm['xyz-hub'].useCapabilities || [])
-      .reduce((props, p) => {
-        props[p.id] = true;
-        return props;
-      }, {});
+  // tokenCapabilities = 
+  //   (tokenInfo.urm['xyz-hub'].useCapabilities || [])
+  //     .reduce((props, p) => {
+  //       props[p.id] = true;
+  //       return props;
+  //     }, {});
      
   console.log("token has", tokenCapabilities);
   
@@ -602,7 +602,7 @@ async function getStats({ spaceId, token, mapStartLocation }) {
   if (spaceInfo.client) {
     if (spaceInfo.client.hexbinSpaceId) {
       hexbinInfo.spaceId = spaceInfo.client.hexbinSpaceId;
-      const hexbinSpaceURL = `https://xyz.api.here.com/hub/spaces/${hexbinInfo.spaceId}?access_token=${token}`;
+      const hexbinSpaceURL = `http://localhost:8080/hub/spaces/${hexbinInfo.spaceId}?access_token=${token}`;
       console.log(hexbinSpaceURL)
       try {
         const hexbinSpaceInfo = await fetch(hexbinSpaceURL).then((response) => response.json());

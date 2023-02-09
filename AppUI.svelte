@@ -23,7 +23,6 @@
         </div>
       {:elseif !spaceLoading}
         <input type="text" placeholder="enter an XYZ space ID" bind:value='spaceId'>
-        <input type="text" placeholder="enter an XYZ token" bind:value='token'>
         <button on:click="updateSpace(true)">Show XYZ Space</button>
       {/if}
     </div>
@@ -1050,7 +1049,7 @@ export default {
 
       // set these to empty strings (not null) to get placeholder text in input
       const spaceId = params.space || '';
-      const token = params.token || '';
+      const token = '';
       const demoMode = (parseInt(params.demo) === 1);
 
       // parse out display option toggles
@@ -1175,7 +1174,7 @@ export default {
     updateSpace(loadScene) {
       const { spaceId, token, basemapScene } = this.get();
 
-      if (spaceId && token) {
+      if (spaceId ) {
         this.set({
           spaceLoading: true, // used to hide UI during load (maybe replace with promise)
           uniqueTagsSeen: new Set() // reset unique tags when loading new space
