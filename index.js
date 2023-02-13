@@ -424,7 +424,7 @@ function applyDisplayOptions(uiState, scene_config) {
 
 function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: { hexbins } = {} }, scene_config) {
   // choose selected main space tags, or hexbin-specific tag
-  const hubApi = AppUI.get().hubApi;
+  const hubApi = appUI.get().hubApi;
   let activeTags = tagFilterQueryParam;
   var currentZoom = scene.view.tile_zoom; // or map.getZoom() ?
   if (hexbins === 1 & Object.keys(hexbinInfo).length > 0) { // ensure hexbins info exists
@@ -493,7 +493,7 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
 }
 
 async function getStats({ spaceId, token, mapStartLocation }) {
-  const hubApi = AppUI.get().hubApi;
+  const hubApi = appUI.get().hubApi;
   // Get stats endpoint
   var url = `{hubApi}/spaces/${spaceId}/statistics`;
   const stats = await fetch(url).then(r => r.json());
