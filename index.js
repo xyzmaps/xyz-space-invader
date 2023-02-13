@@ -287,7 +287,7 @@ function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clu
     scene_config.sources = scene_config.sources || {};
     scene_config.sources._xyzspace = {
       type: 'GeoJSON',
-      url: `{hubApi}/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
+      url: `${hubApi}/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
       url_params: {
         clip: true
       }      
@@ -495,7 +495,7 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
 async function getStats({ spaceId, token, mapStartLocation }) {
   const hubApi = appUI.get().hubApi;
   // Get stats endpoint
-  var url = `{hubApi}/spaces/${spaceId}/statistics`;
+  var url = `${hubApi}/spaces/${spaceId}/statistics`;
   const stats = await fetch(url).then(r => r.json());
     // console.log(stats)
   if (stats.type == 'ErrorResponse'){
