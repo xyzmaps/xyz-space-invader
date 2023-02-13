@@ -36678,16 +36678,16 @@
 			c() {
 				div = createElement("div");
 				if (if_block0) if_block0.c();
-				text0 = createText("\r\n  ");
+				text0 = createText("\n  ");
 				table = createElement("table");
 				if (if_block1) if_block1.c();
-				text1 = createText("\r\n\r\n    ");
+				text1 = createText("\n\n    ");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].c();
 				}
 
-				text2 = createText("\r\n\r\n    ");
+				text2 = createText("\n\n    ");
 				if (if_block2) if_block2.c();
 				setStyle(table, "width", "100%");
 			},
@@ -36836,9 +36836,9 @@
 				td0 = createElement("td");
 				text0 = createText(text0_value);
 				text1 = createText("x");
-				text2 = createText("\r\n        ");
+				text2 = createText("\n        ");
 				td1 = createElement("td");
-				text3 = createText("\r\n        ");
+				text3 = createText("\n        ");
 				td2 = createElement("td");
 				text4 = createText("< ");
 				text5 = createText(text5_value);
@@ -36886,18 +36886,18 @@
 				td0 = createElement("td");
 				text0 = createText(text0_value);
 				text1 = createText("x");
-				text2 = createText("\r\n        ");
+				text2 = createText("\n        ");
 				td1 = createElement("td");
 				div = createElement("div");
 				text3 = createText(" ");
-				text4 = createText("\r\n        ");
+				text4 = createText("\n        ");
 				td2 = createElement("td");
 				text5 = createText(text5_value);
 				text6 = createText(" ⇢ ");
 				text7 = createText(text7_value);
 				setStyle(div, "width", "" + ctx.percent + "%");
 				setStyle(div, "height", "15px");
-				setStyle(div, "background", "" + ((ctx.fromColor && ctx.toColor) ? `linear-gradient(90deg, ${ctx.fromColor}, ${ctx.toColor})` : 'lightblue') + "\r\n          ");
+				setStyle(div, "background", "" + ((ctx.fromColor && ctx.toColor) ? `linear-gradient(90deg, ${ctx.fromColor}, ${ctx.toColor})` : 'lightblue') + "\n          ");
 				setStyle(td1, "width", "65%");
 				setStyle(td2, "width", "35%");
 			},
@@ -36925,7 +36925,7 @@
 
 				if (changed.quantiles) {
 					setStyle(div, "width", "" + ctx.percent + "%");
-					setStyle(div, "background", "" + ((ctx.fromColor && ctx.toColor) ? `linear-gradient(90deg, ${ctx.fromColor}, ${ctx.toColor})` : 'lightblue') + "\r\n          ");
+					setStyle(div, "background", "" + ((ctx.fromColor && ctx.toColor) ? `linear-gradient(90deg, ${ctx.fromColor}, ${ctx.toColor})` : 'lightblue') + "\n          ");
 				}
 
 				if ((changed.quantiles || changed.step) && text5_value !== (text5_value = formatNumber(ctx.from, ctx.step))) {
@@ -36955,9 +36955,9 @@
 				td0 = createElement("td");
 				text0 = createText(text0_value);
 				text1 = createText("x");
-				text2 = createText("\r\n        ");
+				text2 = createText("\n        ");
 				td1 = createElement("td");
-				text3 = createText("\r\n        ");
+				text3 = createText("\n        ");
 				td2 = createElement("td");
 				text4 = createText("> ");
 				text5 = createText(text5_value);
@@ -37078,18 +37078,18 @@
 		return {
 			c() {
 				if (if_block0) if_block0.c();
-				text0 = createText("\r\n\r\n");
+				text0 = createText("\n\n");
 				table = createElement("table");
 				thead = createElement("thead");
 				thead.innerHTML = `<tr><td style="text-align: right;">#</td><td></td><td>Value</td></tr>`;
-				text3 = createText("\r\n  ");
+				text3 = createText("\n  ");
 				tbody = createElement("tbody");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].c();
 				}
 
-				text4 = createText("\r\n\r\n");
+				text4 = createText("\n\n");
 				if (if_block1) if_block1.c();
 				if_block1_anchor = createComment();
 			},
@@ -37194,7 +37194,7 @@
 		return {
 			c() {
 				div = createElement("div");
-				text = createText("Top values by\r\n    ");
+				text = createText("Top values by\n    ");
 				select = createElement("select");
 				option0 = createElement("option");
 				option0.textContent = "count";
@@ -37240,7 +37240,7 @@
 		return {
 			c() {
 				span = createElement("span");
-				span.className = "dot svelte-1wzio15";
+				span.className = "dot svelte-12je7en";
 				setStyle(span, "background-color", ctx.valueColorFunction(ctx.value));
 			},
 
@@ -37273,10 +37273,10 @@
 				tr = createElement("tr");
 				td0 = createElement("td");
 				text0 = createText(text0_value);
-				text1 = createText("\r\n        ");
+				text1 = createText("\n        ");
 				td1 = createElement("td");
 				if (if_block) if_block.c();
-				text2 = createText("\r\n        ");
+				text2 = createText("\n        ");
 				td2 = createElement("td");
 				text3 = createText(text3_value);
 				setStyle(td0, "width", "15px");
@@ -37286,7 +37286,7 @@
 				td2._svelte = { component, ctx };
 
 				addListener(td2, "click", click_handler);
-				td2.className = "value_row svelte-1wzio15";
+				td2.className = "value_row svelte-12je7en";
 				toggleClass(td2, "active", ctx.propValue != '' && ctx.value == ctx.propValue);
 			},
 
@@ -37516,15 +37516,15 @@
 					each0_blocks[i].c();
 				}
 
-				text0 = createText("\r\n\r\n  ");
+				text0 = createText("\n\n  ");
 				if (if_block0) if_block0.c();
-				text1 = createText("\r\n\r\n  ");
+				text1 = createText("\n\n  ");
 
 				for (var i = 0; i < each1_blocks.length; i += 1) {
 					each1_blocks[i].c();
 				}
 
-				text2 = createText("\r\n\r\n  ");
+				text2 = createText("\n\n  ");
 				if (if_block1) if_block1.c();
 				div.style.cssText = div_style_value = ctx.featurePinned ? 'height: 200px; overflow: auto;' : '';
 			},
@@ -37648,23 +37648,23 @@
 				b = createElement("b");
 				raw_after = createElement('noscript');
 				text0 = createText(text0_value);
-				text1 = createText("\r\n      ");
+				text1 = createText("\n      ");
 				td1 = createElement("td");
 				text2 = createText(text2_value);
 				td0._svelte = { component, ctx };
 
 				addListener(td0, "click", click_handler$1);
 				setStyle(td0, "width", "50px");
-				td0.className = "svelte-1lp1mny";
+				td0.className = "svelte-8ssr7b";
 				toggleClass(td0, "active", ctx.prop === ctx.featureProp);
 
 				td1._svelte = { component, ctx };
 
 				addListener(td1, "click", click_handler_1);
 				setStyle(td1, "word-break", "break-all");
-				td1.className = "svelte-1lp1mny";
+				td1.className = "svelte-8ssr7b";
 				toggleClass(td1, "active", ctx.value === ctx.featurePropValue);
-				tr.className = "propRow svelte-1lp1mny";
+				tr.className = "propRow svelte-8ssr7b";
 			},
 
 			m(target, anchor) {
@@ -37749,23 +37749,23 @@
 				b = createElement("b");
 				raw_after = createElement('noscript');
 				text0 = createText(text0_value);
-				text1 = createText("\r\n      ");
+				text1 = createText("\n      ");
 				td1 = createElement("td");
 				text2 = createText(text2_value);
 				td0._svelte = { component, ctx };
 
 				addListener(td0, "click", click_handler_2);
 				setStyle(td0, "width", "50px");
-				td0.className = "svelte-1lp1mny";
+				td0.className = "svelte-8ssr7b";
 				toggleClass(td0, "active", ctx.prop === ctx.featureProp);
 
 				td1._svelte = { component, ctx };
 
 				addListener(td1, "click", click_handler_3);
 				setStyle(td1, "word-break", "break-all");
-				td1.className = "svelte-1lp1mny";
+				td1.className = "svelte-8ssr7b";
 				toggleClass(td1, "active", ctx.value === ctx.featurePropValue);
-				tr.className = "propRow svelte-1lp1mny";
+				tr.className = "propRow svelte-8ssr7b";
 			},
 
 			m(target, anchor) {
@@ -37949,10 +37949,10 @@
 				option0 = createElement("option");
 				option1 = createElement("option");
 				option1.textContent = "equals";
-				text1 = createText("\r\n // removing this so we can sort things like 8601 dates\r\n      ");
+				text1 = createText("\n // removing this so we can sort things like 8601 dates\n      ");
 				option2 = createElement("option");
 				option2.textContent = "range";
-				text3 = createText("\r\n");
+				text3 = createText("\n");
 				span1 = createElement("span");
 				if (if_block) if_block.c();
 				option0.__value = "";
@@ -38083,16 +38083,16 @@
 		return {
 			c() {
 				input0 = createElement("input");
-				text = createText("\r\n        ");
+				text = createText("\n        ");
 				input1 = createElement("input");
 				addListener(input0, "input", input0_input_handler);
 				addListener(input0, "keydown", keydown_handler);
-				input0.className = "range svelte-1evku6d";
+				input0.className = "range svelte-f205wx";
 				setAttribute(input0, "type", "text");
 				input0.placeholder = "min";
 				addListener(input1, "input", input1_input_handler);
 				addListener(input1, "keydown", keydown_handler_1);
-				input1.className = "range svelte-1evku6d";
+				input1.className = "range svelte-f205wx";
 				setAttribute(input1, "type", "text");
 				input1.placeholder = "max";
 			},
@@ -38150,7 +38150,7 @@
 				input = createElement("input");
 				addListener(input, "input", input_input_handler);
 				addListener(input, "keydown", keydown_handler);
-				input.className = "equals svelte-1evku6d";
+				input.className = "equals svelte-f205wx";
 				setAttribute(input, "type", "text");
 				input.placeholder = "value(s)";
 			},
@@ -38304,11 +38304,11 @@
 			c() {
 				div = createElement("div");
 				text0 = createText(ctx.numProperties);
-				text1 = createText(" properties\r\n    (");
+				text1 = createText(" properties\n    (");
 				text2 = createText(text2_value);
-				text3 = createText(" searchable): \r\n    ");
+				text3 = createText(" searchable): \n    ");
 				if (if_block) if_block.c();
-				text4 = createText("\r\n  ");
+				text4 = createText("\n  ");
 				table = createElement("table");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
@@ -38519,9 +38519,9 @@
 				tr = createElement("tr");
 				td = createElement("td");
 				text0 = createText(text0_value);
-				text1 = createText("\r\n        ");
+				text1 = createText("\n        ");
 				if_block.c();
-				text2 = createText("\r\n      ");
+				text2 = createText("\n      ");
 				setStyle(td, "width", "105px");
 				setStyle(td, "max-width", "105px");
 				setStyle(td, "overflow", "hidden");
@@ -38913,6 +38913,7 @@
 	  return {
 	    // set these to empty strings (not null) to get placeholder text in input
 	    spaceId: '',
+	    hubApi: 'http://localhost:8080/hub',
 	    token: '',
 	    spaceInfo: null,
 	    hexbinInfo: {},
@@ -39652,108 +39653,108 @@
 				div2 = createElement("div");
 				div0 = createElement("div");
 				if (if_block0) if_block0.c();
-				text0 = createText("\r\n    ");
+				text0 = createText("\n    ");
 				div1 = createElement("div");
 				if (if_block1) if_block1.c();
-				text1 = createText("\r\n\r\n    \r\n    ");
+				text1 = createText("\n\n    \n    ");
 				if (if_block2) if_block2.c();
-				text2 = createText("\r\n\r\n    ");
+				text2 = createText("\n\n    ");
 				if (if_block3) if_block3.c();
-				text3 = createText("\r\n\r\n    ");
+				text3 = createText("\n\n    ");
 				if (if_block4) if_block4.c();
-				text4 = createText("\r\n\r\n  ");
+				text4 = createText("\n\n  ");
 				div4 = createElement("div");
 				div3 = createElement("div");
 				if (if_block5) if_block5.c();
-				text5 = createText("\r\n\r\n      \r\n      ");
+				text5 = createText("\n\n      \n      ");
 				if (if_block6) if_block6.c();
-				text6 = createText("\r\n\r\n      ");
+				text6 = createText("\n\n      ");
 				if (if_block7) if_block7.c();
-				text7 = createText("\r\n\r\n\r\n      ");
+				text7 = createText("\n\n\n      ");
 				if (if_block8) if_block8.c();
-				text8 = createText("\r\n\r\n    ");
+				text8 = createText("\n\n    ");
 				if (if_block9) if_block9.c();
-				text9 = createText("\r\n\r\n    ");
+				text9 = createText("\n\n    ");
 				if (if_block10) if_block10.c();
-				text10 = createText("\r\n    \r\n    \r\n    ");
+				text10 = createText("\n    \n    \n    ");
 				if (if_block11) if_block11.c();
-				text11 = createText("\r\n\r\n    \r\n    ");
+				text11 = createText("\n\n    \n    ");
 				if (if_block12) if_block12.c();
-				text12 = createText("\r\n\r\n");
+				text12 = createText("\n\n");
 				div13 = createElement("div");
 				div9 = createElement("div");
 				table = createElement("table");
 				if (if_block13) if_block13.c();
-				text13 = createText("\r\n      ");
+				text13 = createText("\n      ");
 				if (if_block14) if_block14.c();
-				text14 = createText("\r\n      ");
+				text14 = createText("\n      ");
 				tr0 = createElement("tr");
 				td0 = createElement("td");
 				td0.textContent = "unique tags in viewport";
 				td1 = createElement("td");
 				text16 = createText(text16_value);
-				text17 = createText("\r\n      ");
+				text17 = createText("\n      ");
 				tr1 = createElement("tr");
 				td2 = createElement("td");
 				td2.textContent = "unique tags seen";
 				td3 = createElement("td");
 				text19 = createText(text19_value);
-				text20 = createText("\r\n    ");
+				text20 = createText("\n    ");
 				div6 = createElement("div");
 				text21 = createText("filtering by tags:");
 				br0 = createElement("br");
-				text22 = createText("\r\n      ");
+				text22 = createText("\n      ");
 				if_block15.c();
-				text23 = createText("\r\n    ");
+				text23 = createText("\n    ");
 				div7 = createElement("div");
 				div7.textContent = "CLEAR TAG FILTERS";
-				text25 = createText("\r\n    ");
+				text25 = createText("\n    ");
 				div8 = createElement("div");
 				input0 = createElement("input");
-				text26 = createText("or\r\n      ");
+				text26 = createText("or\n      ");
 				input1 = createElement("input");
 				text27 = createText("and");
 				br1 = createElement("br");
-				text28 = createText("\r\n  ");
+				text28 = createText("\n  ");
 				div12 = createElement("div");
 				span0 = createElement("span");
 				if_block16.c();
-				text29 = createText("\r\n    ");
+				text29 = createText("\n    ");
 				span1 = createElement("span");
 				if_block17.c();
-				text30 = createText("\r\n    ");
+				text30 = createText("\n    ");
 				span2 = createElement("span");
 				text31 = createText("[sort by ");
 				text32 = createText(ctx.nextTagSort);
 				text33 = createText("]");
-				text34 = createText("\r\n    ");
+				text34 = createText("\n    ");
 				div11 = createElement("div");
 				div10 = createElement("div");
 				input2 = createElement("input");
-				text35 = createText("\r\n\r\n      \r\n      ");
+				text35 = createText("\n\n      \n      ");
 
 				for (i = 0; i < each_blocks_1.length; i += 1) each_blocks_1[i].c();
 
-				text36 = createText("\r\n\r\n      ");
+				text36 = createText("\n\n      ");
 				if (if_block18) if_block18.c();
-				text37 = createText("\r\n\r\n  \r\n  ");
+				text37 = createText("\n\n  \n  ");
 				if (if_block19) if_block19.c();
-				text38 = createText("\r\n\r\n\r\n");
+				text38 = createText("\n\n\n");
 				div15 = createElement("div");
 				div14 = createElement("div");
 				featurepopup._fragment.c();
 				div0.id = "space_info";
-				div0.className = "svelte-1nauac9";
+				div0.className = "svelte-dxs03o";
 				div1.id = "style_info";
-				div1.className = "svelte-1nauac9";
+				div1.className = "svelte-dxs03o";
 				toggleClass(div1, "hideInDemoMode", ctx.demoMode);
 				div2.id = "spaces";
-				div2.className = "panel svelte-1nauac9";
+				div2.className = "panel svelte-dxs03o";
 				div4.id = "viz";
-				div4.className = "panel hideOnMobilePortrait svelte-1nauac9";
+				div4.className = "panel hideOnMobilePortrait svelte-dxs03o";
 				toggleClass(div4, "hideInDemoMode", ctx.demoMode);
 				div5.id = "controls_left";
-				div5.className = "column svelte-1nauac9";
+				div5.className = "column svelte-dxs03o";
 				table.id = "tag_stats";
 				div6.id = "tags_filtered";
 				addListener(div7, "click", click_handler);
@@ -39773,7 +39774,7 @@
 				input1.value = input1.__value;
 				div8.id = "and_or";
 				div9.id = "tag_summary";
-				div9.className = "panel svelte-1nauac9";
+				div9.className = "panel svelte-dxs03o";
 				addListener(span0, "click", click_handler_1);
 				setStyle(span0, "color", "blue");
 				addListener(span1, "click", click_handler_2);
@@ -39785,12 +39786,12 @@
 				input2.id = "tag_search";
 				setAttribute(input2, "type", "text");
 				input2.placeholder = "Filter tags";
-				input2.className = "svelte-1nauac9";
+				input2.className = "svelte-dxs03o";
 				div11.id = "tags";
 				div12.id = "tag_panel";
-				div12.className = "panel svelte-1nauac9";
+				div12.className = "panel svelte-dxs03o";
 				div13.id = "controls_right";
-				div13.className = "column hideOnMobile svelte-1nauac9";
+				div13.className = "column hideOnMobile svelte-dxs03o";
 				toggleClass(div13, "hideInDemoMode", ctx.demoMode);
 				div14.id = "popupContent";
 				setStyle(div14, "margin-top", "18px");
@@ -40237,12 +40238,18 @@
 
 	// (24:29) 
 	function create_if_block_51(component, ctx) {
-		var input, input_updating = false, text, button;
+		var input0, input0_updating = false, text0, input1, input1_updating = false, text1, button;
 
-		function input_input_handler() {
-			input_updating = true;
-			component.set({ spaceId: input.value });
-			input_updating = false;
+		function input0_input_handler() {
+			input0_updating = true;
+			component.set({ hubApi: input0.value });
+			input0_updating = false;
+		}
+
+		function input1_input_handler() {
+			input1_updating = true;
+			component.set({ spaceId: input1.value });
+			input1_updating = false;
 		}
 
 		function click_handler(event) {
@@ -40251,38 +40258,55 @@
 
 		return {
 			c() {
-				input = createElement("input");
-				text = createText("\r\n        ");
+				input0 = createElement("input");
+				text0 = createText("\n      ");
+				input1 = createElement("input");
+				text1 = createText("\n        ");
 				button = createElement("button");
 				button.textContent = "Show XYZ Space";
-				addListener(input, "input", input_input_handler);
-				setAttribute(input, "type", "text");
-				input.placeholder = "enter an XYZ space ID";
+				addListener(input0, "input", input0_input_handler);
+				setAttribute(input0, "type", "text");
+				input0.placeholder = "XYZ API host url";
+				addListener(input1, "input", input1_input_handler);
+				setAttribute(input1, "type", "text");
+				input1.placeholder = "enter an XYZ space ID";
 				addListener(button, "click", click_handler);
-				button.className = "svelte-1nauac9";
+				button.className = "svelte-dxs03o";
 			},
 
 			m(target, anchor) {
-				insert(target, input, anchor);
+				insert(target, input0, anchor);
 
-				input.value = ctx.spaceId;
+				input0.value = ctx.hubApi;
 
-				insert(target, text, anchor);
+				insert(target, text0, anchor);
+				insert(target, input1, anchor);
+
+				input1.value = ctx.spaceId;
+
+				insert(target, text1, anchor);
 				insert(target, button, anchor);
 			},
 
 			p(changed, ctx) {
-				if (!input_updating && changed.spaceId) input.value = ctx.spaceId;
+				if (!input0_updating && changed.hubApi) input0.value = ctx.hubApi;
+				if (!input1_updating && changed.spaceId) input1.value = ctx.spaceId;
 			},
 
 			d(detach) {
 				if (detach) {
-					detachNode(input);
+					detachNode(input0);
 				}
 
-				removeListener(input, "input", input_input_handler);
+				removeListener(input0, "input", input0_input_handler);
 				if (detach) {
-					detachNode(text);
+					detachNode(text0);
+					detachNode(input1);
+				}
+
+				removeListener(input1, "input", input1_input_handler);
+				if (detach) {
+					detachNode(text1);
 					detachNode(button);
 				}
 
@@ -40306,13 +40330,13 @@
 				div1 = createElement("div");
 				button = createElement("button");
 				text0 = createText(text0_value);
-				text1 = createText("\r\n\r\n          \r\n          ");
+				text1 = createText("\n\n          \n          ");
 				div0 = createElement("div");
 				text2 = createText(text2_value);
-				text3 = createText("\r\n          ");
+				text3 = createText("\n          ");
 				if (if_block) if_block.c();
 				addListener(button, "click", click_handler);
-				button.className = "demoModeToggle svelte-1nauac9";
+				button.className = "demoModeToggle svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -40377,9 +40401,9 @@
 				text4 = createText(text4_value);
 				text5 = createText(", ");
 				text6 = createText(text6_value);
-				text7 = createText("\r\n            ");
+				text7 = createText("\n            ");
 				if (if_block) if_block.c();
-				text8 = createText("\r\n            ");
+				text8 = createText("\n            ");
 				div1 = createElement("div");
 				text9 = createText(text9_value);
 				setStyle(div1, "font-size", "10px");
@@ -40480,7 +40504,7 @@
 		};
 	}
 
-	// (30:6) {#if displayToggles}
+	// (31:6) {#if displayToggles}
 	function create_if_block_31(component, ctx) {
 		var table0, tr0, td0, text1, td1, text2_value = ctx.displayToggles.roads, text2, text3, td2, text5, td3, text6_value = ctx.displayToggles.buildings, text6, text7, td4, text9, td5, text10_value = ctx.displayToggles.water, text10, text11, td6, text13, td7, text14_value = ctx.displayToggles.places, text14, text15, tr1, td8, text17, td9, text18_value = ctx.displayToggles.points, text18, text19, td10, text21, td11, text22_value = ctx.displayToggles.lines, text22, text23, td12, text25, td13, text26_value = ctx.displayToggles.outlines, text26, text27, table1, tr2, td14, text29, text30, text31, text32, text33, text34, text35, div, text36, select, select_updating = false, text37, text38, button;
 
@@ -40554,75 +40578,75 @@
 				tr0 = createElement("tr");
 				td0 = createElement("td");
 				td0.textContent = "roads:";
-				text1 = createText("\r\n            ");
+				text1 = createText("\n            ");
 				td1 = createElement("td");
 				text2 = createText(text2_value);
-				text3 = createText("\r\n            ");
+				text3 = createText("\n            ");
 				td2 = createElement("td");
 				td2.textContent = "buildings:";
-				text5 = createText("\r\n            ");
+				text5 = createText("\n            ");
 				td3 = createElement("td");
 				text6 = createText(text6_value);
-				text7 = createText("\r\n            ");
+				text7 = createText("\n            ");
 				td4 = createElement("td");
 				td4.textContent = "water:";
-				text9 = createText("\r\n            ");
+				text9 = createText("\n            ");
 				td5 = createElement("td");
 				text10 = createText(text10_value);
-				text11 = createText("\r\n            ");
+				text11 = createText("\n            ");
 				td6 = createElement("td");
 				td6.textContent = "places:";
-				text13 = createText("\r\n            ");
+				text13 = createText("\n            ");
 				td7 = createElement("td");
 				text14 = createText(text14_value);
-				text15 = createText("\r\n          ");
+				text15 = createText("\n          ");
 				tr1 = createElement("tr");
 				td8 = createElement("td");
 				td8.textContent = "points:";
-				text17 = createText("\r\n            ");
+				text17 = createText("\n            ");
 				td9 = createElement("td");
 				text18 = createText(text18_value);
-				text19 = createText("\r\n            ");
+				text19 = createText("\n            ");
 				td10 = createElement("td");
 				td10.textContent = "lines:";
-				text21 = createText("\r\n            ");
+				text21 = createText("\n            ");
 				td11 = createElement("td");
 				text22 = createText(text22_value);
-				text23 = createText("\r\n            ");
+				text23 = createText("\n            ");
 				td12 = createElement("td");
 				td12.textContent = "outlines:";
-				text25 = createText("\r\n            ");
+				text25 = createText("\n            ");
 				td13 = createElement("td");
 				text26 = createText(text26_value);
-				text27 = createText("\r\n        ");
+				text27 = createText("\n        ");
 				table1 = createElement("table");
 				tr2 = createElement("tr");
 				td14 = createElement("td");
 				td14.textContent = "clustering:";
-				text29 = createText("\r\n            ");
+				text29 = createText("\n            ");
 				if (if_block0) if_block0.c();
-				text30 = createText("\r\n            ");
+				text30 = createText("\n            ");
 				if (if_block1) if_block1.c();
-				text31 = createText("\r\n            ");
+				text31 = createText("\n            ");
 				if (if_block2) if_block2.c();
-				text32 = createText("\r\n            ");
+				text32 = createText("\n            ");
 				if (if_block3) if_block3.c();
-				text33 = createText("\r\n        \r\n        ");
+				text33 = createText("\n        \n        ");
 				if (if_block4) if_block4.c();
-				text34 = createText("\r\n      \r\n        ");
+				text34 = createText("\n      \n        ");
 				if (if_block5) if_block5.c();
-				text35 = createText("\r\n\r\n        \r\n        ");
+				text35 = createText("\n\n        \n        ");
 				div = createElement("div");
-				text36 = createText("basemap:\r\n          ");
+				text36 = createText("basemap:\n          ");
 				select = createElement("select");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].c();
 				}
 
-				text37 = createText("\r\n\r\n        ");
+				text37 = createText("\n\n        ");
 				if (if_block6) if_block6.c();
-				text38 = createText("\r\n\r\n        \r\n          ");
+				text38 = createText("\n\n        \n          ");
 				button = createElement("button");
 				button.textContent = "export";
 				addListener(td0, "click", click_handler);
@@ -40643,11 +40667,11 @@
 				setStyle(td14, "color", "blue");
 				addListener(select, "change", select_change_handler);
 				if (!('basemap' in ctx)) component.root._beforecreate.push(select_change_handler);
-				select.className = "controls_left_dropdown svelte-1nauac9";
-				div.className = "controls_left_selector svelte-1nauac9";
+				select.className = "controls_left_dropdown svelte-dxs03o";
+				div.className = "controls_left_selector svelte-dxs03o";
 				addListener(button, "click", click_handler_8);
 				setStyle(button, "float", "right");
-				button.className = "svelte-1nauac9";
+				button.className = "svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -40914,7 +40938,7 @@
 		};
 	}
 
-	// (54:12) {#if displayToggles.clustering == 0}
+	// (55:12) {#if displayToggles.clustering == 0}
 	function create_if_block_47(component, ctx) {
 		var td;
 
@@ -40936,7 +40960,7 @@
 		};
 	}
 
-	// (63:12) {#if displayToggles.clustering == 1}
+	// (64:12) {#if displayToggles.clustering == 1}
 	function create_if_block_46(component, ctx) {
 		var td;
 
@@ -40958,7 +40982,7 @@
 		};
 	}
 
-	// (66:12) {#if displayToggles.clustering == 2}
+	// (67:12) {#if displayToggles.clustering == 2}
 	function create_if_block_45(component, ctx) {
 		var td;
 
@@ -40980,7 +41004,7 @@
 		};
 	}
 
-	// (69:12) {#if displayToggles.clustering == 3}
+	// (70:12) {#if displayToggles.clustering == 3}
 	function create_if_block_44(component, ctx) {
 		var td0, text1, td1, text3, td2, text4_value = ctx.displayToggles.quadRez, text4;
 
@@ -40992,10 +41016,10 @@
 			c() {
 				td0 = createElement("td");
 				td0.textContent = "Quadbins";
-				text1 = createText("\r\n            ");
+				text1 = createText("\n            ");
 				td1 = createElement("td");
 				td1.textContent = "resolution:";
-				text3 = createText("\r\n            ");
+				text3 = createText("\n            ");
 				td2 = createElement("td");
 				text4 = createText(text4_value);
 				addListener(td1, "click", click_handler);
@@ -41033,7 +41057,7 @@
 		};
 	}
 
-	// (77:8) {#if gisInfo.voronoi || gisInfo.delaunay}
+	// (78:8) {#if gisInfo.voronoi || gisInfo.delaunay}
 	function create_if_block_37(component, ctx) {
 		var table, tr, td, text1, text2;
 
@@ -41047,9 +41071,9 @@
 				tr = createElement("tr");
 				td = createElement("td");
 				td.textContent = "GIS:";
-				text1 = createText("\r\n            ");
+				text1 = createText("\n            ");
 				if (if_block0) if_block0.c();
-				text2 = createText("\r\n            ");
+				text2 = createText("\n            ");
 				if (if_block1) if_block1.c();
 			},
 
@@ -41102,7 +41126,7 @@
 		};
 	}
 
-	// (81:12) {#if gisInfo.voronoi}
+	// (82:12) {#if gisInfo.voronoi}
 	function create_if_block_41(component, ctx) {
 		var td0, text1, td1, text2;
 
@@ -41118,10 +41142,10 @@
 			c() {
 				td0 = createElement("td");
 				td0.textContent = "Voronoi:";
-				text1 = createText("\r\n              ");
+				text1 = createText("\n              ");
 				td1 = createElement("td");
 				if (if_block0) if_block0.c();
-				text2 = createText("\r\n              ");
+				text2 = createText("\n              ");
 				if (if_block1) if_block1.c();
 				addListener(td0, "click", click_handler);
 				setStyle(td0, "color", "blue");
@@ -41179,7 +41203,7 @@
 		};
 	}
 
-	// (84:14) {#if displayToggles.voronoi == 0}
+	// (85:14) {#if displayToggles.voronoi == 0}
 	function create_if_block_43(component, ctx) {
 		var text;
 
@@ -41200,7 +41224,7 @@
 		};
 	}
 
-	// (87:14) {#if displayToggles.voronoi == 1}
+	// (88:14) {#if displayToggles.voronoi == 1}
 	function create_if_block_42(component, ctx) {
 		var text_value = ctx.gisInfo.voronoi, text;
 
@@ -41227,7 +41251,7 @@
 		};
 	}
 
-	// (92:12) {#if gisInfo.delaunay}
+	// (93:12) {#if gisInfo.delaunay}
 	function create_if_block_38(component, ctx) {
 		var td0, text1, td1, text2;
 
@@ -41243,10 +41267,10 @@
 			c() {
 				td0 = createElement("td");
 				td0.textContent = "Delaunay:";
-				text1 = createText("\r\n              ");
+				text1 = createText("\n              ");
 				td1 = createElement("td");
 				if (if_block0) if_block0.c();
-				text2 = createText("\r\n              ");
+				text2 = createText("\n              ");
 				if (if_block1) if_block1.c();
 				addListener(td0, "click", click_handler);
 				setStyle(td0, "color", "blue");
@@ -41304,7 +41328,7 @@
 		};
 	}
 
-	// (95:14) {#if displayToggles.delaunay == 0}
+	// (96:14) {#if displayToggles.delaunay == 0}
 	function create_if_block_40(component, ctx) {
 		var text;
 
@@ -41325,7 +41349,7 @@
 		};
 	}
 
-	// (98:14) {#if displayToggles.delaunay == 1}
+	// (99:14) {#if displayToggles.delaunay == 1}
 	function create_if_block_39(component, ctx) {
 		var text_value = ctx.gisInfo.delaunay, text;
 
@@ -41352,7 +41376,7 @@
 		};
 	}
 
-	// (107:8) {#if hexbinInfo.spaceId}
+	// (108:8) {#if hexbinInfo.spaceId}
 	function create_if_block_33(component, ctx) {
 		var table, tr0, td0, td1, text1, text2, text3, tr1, td2, text4_value = ctx.hexbinInfo.spaceId, text4, text5, text6_value = ctx.hexbinInfo.zoomLevels, text6;
 
@@ -41374,11 +41398,11 @@
 				td0.textContent = "CLI hexbins: ";
 				td1 = createElement("td");
 				if (if_block0) if_block0.c();
-				text1 = createText("\r\n                  ");
+				text1 = createText("\n                  ");
 				if (if_block1) if_block1.c();
-				text2 = createText("\r\n                  ");
+				text2 = createText("\n                  ");
 				if (if_block2) if_block2.c();
-				text3 = createText("\r\n              ");
+				text3 = createText("\n              ");
 				tr1 = createElement("tr");
 				td2 = createElement("td");
 				text4 = createText(text4_value);
@@ -41462,7 +41486,7 @@
 		};
 	}
 
-	// (112:18) {#if displayToggles.hexbins == 0}
+	// (113:18) {#if displayToggles.hexbins == 0}
 	function create_if_block_36(component, ctx) {
 		var text;
 
@@ -41483,7 +41507,7 @@
 		};
 	}
 
-	// (115:18) {#if displayToggles.hexbins == 1}
+	// (116:18) {#if displayToggles.hexbins == 1}
 	function create_if_block_35(component, ctx) {
 		var text;
 
@@ -41504,7 +41528,7 @@
 		};
 	}
 
-	// (118:18) {#if displayToggles.hexbins == 2}
+	// (119:18) {#if displayToggles.hexbins == 2}
 	function create_if_block_34(component, ctx) {
 		var text;
 
@@ -41525,7 +41549,7 @@
 		};
 	}
 
-	// (131:12) {#each Object.keys(basemaps) as basemap}
+	// (132:12) {#each Object.keys(basemaps) as basemap}
 	function create_each_block_10(component, ctx) {
 		var option, text_value = ctx.basemap, text, option_value_value;
 
@@ -41562,7 +41586,7 @@
 		};
 	}
 
-	// (137:8) {#if isProjectable(basemap) }
+	// (138:8) {#if isProjectable(basemap) }
 	function create_if_block_32(component, ctx) {
 		var div, text, select, select_updating = false;
 
@@ -41583,7 +41607,7 @@
 		return {
 			c() {
 				div = createElement("div");
-				text = createText("projection:\r\n            ");
+				text = createText("projection:\n            ");
 				select = createElement("select");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
@@ -41591,8 +41615,8 @@
 				}
 				addListener(select, "change", select_change_handler);
 				if (!('projection' in ctx)) component.root._beforecreate.push(select_change_handler);
-				select.className = "controls_left_dropdown svelte-1nauac9";
-				div.className = "controls_left_selector svelte-1nauac9";
+				select.className = "controls_left_dropdown svelte-dxs03o";
+				div.className = "controls_left_selector svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -41644,7 +41668,7 @@
 		};
 	}
 
-	// (141:14) {#each Object.keys(projections) as projection}
+	// (142:14) {#each Object.keys(projections) as projection}
 	function create_each_block_9(component, ctx) {
 		var option, text_value = ctx.projection, text, option_value_value;
 
@@ -41681,7 +41705,7 @@
 		};
 	}
 
-	// (154:4) {#if demoMode && displayToggles.label != null}
+	// (155:4) {#if demoMode && displayToggles.label != null}
 	function create_if_block_30(component, ctx) {
 		var div, text0, b, text1_value = ctx.displayToggles.label, text1;
 
@@ -41715,7 +41739,7 @@
 		};
 	}
 
-	// (161:4) {#if demoMode && featurePointSizeProp != null}
+	// (162:4) {#if demoMode && featurePointSizeProp != null}
 	function create_if_block_29(component, ctx) {
 		var div, text0, b, text1;
 
@@ -41749,7 +41773,7 @@
 		};
 	}
 
-	// (168:4) {#if demoMode && featureProp && featurePropCount != null}
+	// (169:4) {#if demoMode && featureProp && featurePropCount != null}
 	function create_if_block_25(component, ctx) {
 		var div, text0, b0, text1, text2, b1, text3_value = ctx.displayToggles.vizMode, text3, text4, if_block_anchor;
 
@@ -41771,7 +41795,7 @@
 				text2 = createText(" by ");
 				b1 = createElement("b");
 				text3 = createText(text3_value);
-				text4 = createText("\r\n\r\n      \r\n      ");
+				text4 = createText("\n\n      \n      ");
 				if (if_block) if_block.c();
 				if_block_anchor = createComment();
 				setStyle(div, "margin", "5px 0px");
@@ -41823,7 +41847,7 @@
 		};
 	}
 
-	// (197:53) 
+	// (198:53) 
 	function create_if_block_28(component, ctx) {
 		var div, featureproptopvalues_updating = {};
 
@@ -41867,7 +41891,7 @@
 			c() {
 				div = createElement("div");
 				featureproptopvalues._fragment.c();
-				div.className = "hideOnMobilePortrait svelte-1nauac9";
+				div.className = "hideOnMobilePortrait svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -41903,7 +41927,7 @@
 		};
 	}
 
-	// (185:75) 
+	// (186:75) 
 	function create_if_block_27(component, ctx) {
 		var div, featureproptopvalues_updating = {};
 
@@ -41947,7 +41971,7 @@
 			c() {
 				div = createElement("div");
 				featureproptopvalues._fragment.c();
-				div.className = "hideOnMobilePortrait svelte-1nauac9";
+				div.className = "hideOnMobilePortrait svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -41983,7 +42007,7 @@
 		};
 	}
 
-	// (175:6) {#if displayToggles.vizMode === 'range'}
+	// (176:6) {#if displayToggles.vizMode === 'range'}
 	function create_if_block_26(component, ctx) {
 		var div;
 
@@ -42004,7 +42028,7 @@
 			c() {
 				div = createElement("div");
 				featureprophistogram._fragment.c();
-				div.className = "hideOnMobilePortrait svelte-1nauac9";
+				div.className = "hideOnMobilePortrait svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -42031,7 +42055,7 @@
 		};
 	}
 
-	// (216:6) {#if featureProp && featurePropCount != null}
+	// (217:6) {#if featureProp && featurePropCount != null}
 	function create_if_block_23(component, ctx) {
 		var div1, div0, text0, text1, text2;
 
@@ -42043,10 +42067,10 @@
 				div0 = createElement("div");
 				text0 = createText(ctx.featurePropCount);
 				text1 = createText(" unique values in the viewport");
-				text2 = createText("\r\n\r\n          ");
+				text2 = createText("\n\n          ");
 				if (if_block) if_block.c();
 				setStyle(div1, "margin", "5px 0 5px 0");
-				div1.className = "hideOnMobile svelte-1nauac9";
+				div1.className = "hideOnMobile svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -42087,7 +42111,7 @@
 		};
 	}
 
-	// (220:10) {#if featurePropMin != null}
+	// (221:10) {#if featurePropMin != null}
 	function create_if_block_24(component, ctx) {
 		var div0, text0, text1, text2, text3, text4, text5, text6, div1, text7, text8_value = ctx.featurePropMean.toFixed(2), text8, text9, text10_value = ctx.featurePropStdDev.toFixed(2), text10, text11, text12_value = ctx.featurePropSigma.toFixed(2), text12, text13, text14_value = ctx.featurePropSigmaFloor.toFixed(2), text14, text15, text16_value = ctx.featurePropSigmaCeiling.toFixed(2), text16, text17;
 
@@ -42100,13 +42124,13 @@
 				text3 = createText(ctx.featurePropMedian);
 				text4 = createText(", max: ");
 				text5 = createText(ctx.featurePropMax);
-				text6 = createText("\r\n            ");
+				text6 = createText("\n            ");
 				div1 = createElement("div");
 				text7 = createText("μ: ");
 				text8 = createText(text8_value);
-				text9 = createText(",\r\n              σ: ");
+				text9 = createText(",\n              σ: ");
 				text10 = createText(text10_value);
-				text11 = createText(",\r\n              ");
+				text11 = createText(",\n              ");
 				text12 = createText(text12_value);
 				text13 = createText("% (");
 				text14 = createText(text14_value);
@@ -42182,7 +42206,7 @@
 		};
 	}
 
-	// (232:6) {#if displayToggles}
+	// (233:6) {#if displayToggles}
 	function create_if_block_21(component, ctx) {
 		var div, text, select, select_updating = false;
 
@@ -42208,7 +42232,7 @@
 		return {
 			c() {
 				div = createElement("div");
-				text = createText("Analyze by\r\n          ");
+				text = createText("Analyze by\n          ");
 				select = createElement("select");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
@@ -42270,7 +42294,7 @@
 		};
 	}
 
-	// (237:14) {#if featureProp || !vizModeUsesProperty(mode)}
+	// (238:14) {#if featureProp || !vizModeUsesProperty(mode)}
 	function create_if_block_22(component, ctx) {
 		var option, text_value = ctx.vizModes[ctx.mode].label || ctx.mode, text, option_value_value;
 
@@ -42307,7 +42331,7 @@
 		};
 	}
 
-	// (236:12) {#each Object.keys(vizModes) as mode}
+	// (237:12) {#each Object.keys(vizModes) as mode}
 	function create_each_block_8(component, ctx) {
 		var if_block_anchor;
 
@@ -42348,7 +42372,7 @@
 		};
 	}
 
-	// (245:6) {#if sortedUniqueFeaturePropsSeen.length > 0 && vizModeUsesProperty(displayToggles.vizMode)}
+	// (246:6) {#if sortedUniqueFeaturePropsSeen.length > 0 && vizModeUsesProperty(displayToggles.vizMode)}
 	function create_if_block_19(component, ctx) {
 		var div, span, text1, select, option, each_blocks_1 = [], each_lookup = blankObject(), select_updating = false, text2, if_block_anchor;
 
@@ -42375,13 +42399,13 @@
 				div = createElement("div");
 				span = createElement("span");
 				span.textContent = "Visualize by property";
-				text1 = createText("\r\n          ");
+				text1 = createText("\n          ");
 				select = createElement("select");
 				option = createElement("option");
 
 				for (i = 0; i < each_blocks_1.length; i += 1) each_blocks_1[i].c();
 
-				text2 = createText("\r\n\r\n        \r\n        ");
+				text2 = createText("\n\n        \n        ");
 				if (if_block) if_block.c();
 				if_block_anchor = createComment();
 				setStyle(span, "flex", "0 0 auto");
@@ -42393,7 +42417,7 @@
 				if (!('featureProp' in ctx)) component.root._beforecreate.push(select_change_handler);
 				setStyle(select, "flex", "1 1 auto");
 				setStyle(select, "width", "100%");
-				div.className = "property_selector svelte-1nauac9";
+				div.className = "property_selector svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -42452,7 +42476,7 @@
 		};
 	}
 
-	// (253:12) {#each sortedUniqueFeaturePropsSeen as [prop] (JSON.stringify(prop))}
+	// (254:12) {#each sortedUniqueFeaturePropsSeen as [prop] (JSON.stringify(prop))}
 	function create_each_block_7(component, key_1, ctx) {
 		var option, text_value = ctx.prop, text, option_value_value;
 
@@ -42494,7 +42518,7 @@
 		};
 	}
 
-	// (260:8) {#if featureProp && featurePropValueCounts}
+	// (261:8) {#if featureProp && featurePropValueCounts}
 	function create_if_block_20(component, ctx) {
 		var div, span, text_1, select, option, select_updating = false;
 
@@ -42517,7 +42541,7 @@
 				div = createElement("div");
 				span = createElement("span");
 				span.textContent = "Filter by value";
-				text_1 = createText("\r\n            ");
+				text_1 = createText("\n            ");
 				select = createElement("select");
 				option = createElement("option");
 
@@ -42533,7 +42557,7 @@
 				if (!('featurePropValue' in ctx)) component.root._beforecreate.push(select_change_handler);
 				setStyle(select, "flex", "1 1 auto");
 				setStyle(select, "width", "100%");
-				div.className = "property_selector svelte-1nauac9";
+				div.className = "property_selector svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -42587,7 +42611,7 @@
 		};
 	}
 
-	// (265:14) {#each featurePropValueCounts as [value, count]}
+	// (266:14) {#each featurePropValueCounts as [value, count]}
 	function create_each_block_6(component, ctx) {
 		var option, text0, text1_value = ctx.count, text1, text2, text3_value = ctx.value, text3, option_value_value;
 
@@ -42634,7 +42658,7 @@
 		};
 	}
 
-	// (274:6) {#if featureProp && featurePropCount != null}
+	// (275:6) {#if featureProp && featurePropCount != null}
 	function create_if_block_12(component, ctx) {
 		var text, if_block1_anchor;
 
@@ -42645,7 +42669,7 @@
 		return {
 			c() {
 				if (if_block0) if_block0.c();
-				text = createText("\r\n\r\n        \r\n        ");
+				text = createText("\n\n        \n        ");
 				if (if_block1) if_block1.c();
 				if_block1_anchor = createComment();
 			},
@@ -42699,7 +42723,7 @@
 		};
 	}
 
-	// (276:8) {#if displayToggles}
+	// (277:8) {#if displayToggles}
 	function create_if_block_17(component, ctx) {
 		var div, span, text1, select, select_updating = false, text2, if_block_anchor;
 
@@ -42725,14 +42749,14 @@
 				div = createElement("div");
 				span = createElement("span");
 				span.textContent = "Pattern";
-				text1 = createText("\r\n            ");
+				text1 = createText("\n            ");
 				select = createElement("select");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].c();
 				}
 
-				text2 = createText("\r\n\r\n          ");
+				text2 = createText("\n\n          ");
 				if (if_block) if_block.c();
 				if_block_anchor = createComment();
 				setStyle(span, "flex", "0 0 auto");
@@ -42742,7 +42766,7 @@
 				if (!('displayToggles' in ctx)) component.root._beforecreate.push(select_change_handler);
 				setStyle(select, "flex", "1 1 auto");
 				setStyle(select, "width", "100%");
-				div.className = "property_selector svelte-1nauac9";
+				div.className = "property_selector svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -42800,7 +42824,7 @@
 		};
 	}
 
-	// (280:14) {#each patternOptions as pattern}
+	// (281:14) {#each patternOptions as pattern}
 	function create_each_block_5(component, ctx) {
 		var option, text;
 
@@ -42825,7 +42849,7 @@
 		};
 	}
 
-	// (286:10) {#if displayToggles.pattern}
+	// (287:10) {#if displayToggles.pattern}
 	function create_if_block_18(component, ctx) {
 		var div, span, text_1, input;
 
@@ -42839,7 +42863,7 @@
 				div = createElement("div");
 				span = createElement("span");
 				span.textContent = "Pattern color";
-				text_1 = createText("\r\n              ");
+				text_1 = createText("\n              ");
 				input = createElement("input");
 				setStyle(span, "flex", "0 0 auto");
 				setStyle(span, "margin-right", "5px");
@@ -42848,7 +42872,7 @@
 				setStyle(input, "flex", "1 1 auto");
 				setStyle(input, "width", "100%");
 				setAttribute(input, "type", "color");
-				div.className = "property_selector svelte-1nauac9";
+				div.className = "property_selector svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -42875,7 +42899,7 @@
 		};
 	}
 
-	// (295:8) {#if showFeaturePropPalette(displayToggles.vizMode)}
+	// (296:8) {#if showFeaturePropPalette(displayToggles.vizMode)}
 	function create_if_block_13(component, ctx) {
 		var div, text0, select, select_updating = false, text1, label, input, text2, text3, if_block_anchor;
 
@@ -42902,25 +42926,25 @@
 		return {
 			c() {
 				div = createElement("div");
-				text0 = createText("Color palette\r\n            ");
+				text0 = createText("Color palette\n            ");
 				select = createElement("select");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].c();
 				}
 
-				text1 = createText("\r\n\r\n            ");
+				text1 = createText("\n\n            ");
 				label = createElement("label");
 				input = createElement("input");
-				text2 = createText("\r\n              Flip");
-				text3 = createText("\r\n\r\n          ");
+				text2 = createText("\n              Flip");
+				text3 = createText("\n\n          ");
 				if (if_block) if_block.c();
 				if_block_anchor = createComment();
 				addListener(select, "change", select_change_handler);
 				if (!('featurePropPaletteName' in ctx)) component.root._beforecreate.push(select_change_handler);
 				addListener(input, "change", input_change_handler);
 				setAttribute(input, "type", "checkbox");
-				div.className = "hideOnMobile svelte-1nauac9";
+				div.className = "hideOnMobile svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -43006,7 +43030,7 @@
 		};
 	}
 
-	// (299:14) {#each Object.keys(colorPalettes) as palette}
+	// (300:14) {#each Object.keys(colorPalettes) as palette}
 	function create_each_block_4(component, ctx) {
 		var option, text_value = ctx.palette, text, option_value_value;
 
@@ -43043,7 +43067,7 @@
 		};
 	}
 
-	// (310:10) {#if featurePropMin != null}
+	// (311:10) {#if featurePropMin != null}
 	function create_if_block_14(component, ctx) {
 		var if_block_anchor;
 
@@ -43084,7 +43108,7 @@
 		};
 	}
 
-	// (311:12) {#if useFeaturePropRangeLimit(displayToggles.vizMode)}
+	// (312:12) {#if useFeaturePropRangeLimit(displayToggles.vizMode)}
 	function create_if_block_15(component, ctx) {
 		var div, text0, select, option0, option1, option2, option3, option4, option5, select_updating = false, text7, input0, input0_updating = false, text8, input1, input1_updating = false, text9, label, input2, text10, text11, if_block_anchor;
 
@@ -43135,7 +43159,7 @@
 		return {
 			c() {
 				div = createElement("div");
-				text0 = createText("Limit values:\r\n                ");
+				text0 = createText("Limit values:\n                ");
 				select = createElement("select");
 				option0 = createElement("option");
 				option0.textContent = "all";
@@ -43149,15 +43173,15 @@
 				option4.textContent = "sigma 1";
 				option5 = createElement("option");
 				option5.textContent = "custom";
-				text7 = createText("\r\n                ");
+				text7 = createText("\n                ");
 				input0 = createElement("input");
-				text8 = createText("\r\n                ");
+				text8 = createText("\n                ");
 				input1 = createElement("input");
-				text9 = createText("\r\n\r\n              ");
+				text9 = createText("\n\n              ");
 				label = createElement("label");
 				input2 = createElement("input");
-				text10 = createText("\r\n                Hide values outside range");
-				text11 = createText("\r\n\r\n              ");
+				text10 = createText("\n                Hide values outside range");
+				text11 = createText("\n\n              ");
 				if (if_block) if_block.c();
 				if_block_anchor = createComment();
 				option0.__value = "0";
@@ -43172,20 +43196,20 @@
 				option4.value = option4.__value;
 				option5.__value = "custom";
 				option5.value = option5.__value;
-				option5.className = "hideOnMobile svelte-1nauac9";
+				option5.className = "hideOnMobile svelte-dxs03o";
 				addListener(select, "change", select_change_handler);
 				if (!('featurePropRangeFilter' in ctx)) component.root._beforecreate.push(select_change_handler);
 				addListener(select, "change", change_handler);
 				addListener(input0, "input", input0_input_handler);
 				addListener(input0, "input", input_handler);
 				addListener(input0, "keydown", keydown_handler);
-				input0.className = "range_filter hideOnMobile svelte-1nauac9";
+				input0.className = "range_filter hideOnMobile svelte-dxs03o";
 				setAttribute(input0, "type", "text");
 				input0.placeholder = "min";
 				addListener(input1, "input", input1_input_handler);
 				addListener(input1, "input", input_handler_1);
 				addListener(input1, "keydown", keydown_handler_1);
-				input1.className = "range_filter hideOnMobile svelte-1nauac9";
+				input1.className = "range_filter hideOnMobile svelte-dxs03o";
 				setAttribute(input1, "type", "text");
 				input1.placeholder = "max";
 				addListener(input2, "change", input2_change_handler);
@@ -43279,7 +43303,7 @@
 		};
 	}
 
-	// (331:14) {#if featurePropMostlyNumeric}
+	// (332:14) {#if featurePropMostlyNumeric}
 	function create_if_block_16(component, ctx) {
 
 		var featureprophistogram_initial_data = {
@@ -43318,7 +43342,7 @@
 		};
 	}
 
-	// (345:4) {#if sortedUniqueFeaturePropsSeen.length > 0}
+	// (346:4) {#if sortedUniqueFeaturePropsSeen.length > 0}
 	function create_if_block_10(component, ctx) {
 		var div0, span0, text1, select0, option0, select0_updating = false, text2, div1, span1, text4, select1, option1, select1_updating = false, text5, if_block_anchor;
 
@@ -43358,7 +43382,7 @@
 				div0 = createElement("div");
 				span0 = createElement("span");
 				span0.textContent = "Label features by";
-				text1 = createText("\r\n        ");
+				text1 = createText("\n        ");
 				select0 = createElement("select");
 				option0 = createElement("option");
 
@@ -43366,11 +43390,11 @@
 					each0_blocks[i].c();
 				}
 
-				text2 = createText("\r\n\r\n      \r\n      ");
+				text2 = createText("\n\n      \n      ");
 				div1 = createElement("div");
 				span1 = createElement("span");
 				span1.textContent = "Scale point size by";
-				text4 = createText("\r\n        ");
+				text4 = createText("\n        ");
 				select1 = createElement("select");
 				option1 = createElement("option");
 
@@ -43378,7 +43402,7 @@
 					each1_blocks[i].c();
 				}
 
-				text5 = createText("\r\n\r\n      \r\n      ");
+				text5 = createText("\n\n      \n      ");
 				if (if_block) if_block.c();
 				if_block_anchor = createComment();
 				setStyle(span0, "flex", "0 0 auto");
@@ -43390,7 +43414,7 @@
 				if (!('displayToggles' in ctx)) component.root._beforecreate.push(select0_change_handler);
 				setStyle(select0, "flex", "1 1 auto");
 				setStyle(select0, "width", "100%");
-				div0.className = "property_selector svelte-1nauac9";
+				div0.className = "property_selector svelte-dxs03o";
 				setStyle(span1, "flex", "0 0 auto");
 				setStyle(span1, "margin-right", "5px");
 				setStyle(span1, "width", "115px");
@@ -43400,7 +43424,7 @@
 				if (!('featurePointSizeProp' in ctx)) component.root._beforecreate.push(select1_change_handler);
 				setStyle(select1, "flex", "1 1 auto");
 				setStyle(select1, "width", "100%");
-				div1.className = "property_selector svelte-1nauac9";
+				div1.className = "property_selector svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -43524,7 +43548,7 @@
 		};
 	}
 
-	// (351:10) {#each sortedUniqueFeaturePropsSeen as [prop]}
+	// (352:10) {#each sortedUniqueFeaturePropsSeen as [prop]}
 	function create_each_block_3(component, ctx) {
 		var option, text_value = ctx.prop, text, option_value_value;
 
@@ -43561,7 +43585,7 @@
 		};
 	}
 
-	// (362:10) {#each sortedUniqueFeaturePropsSeen as [prop]}
+	// (363:10) {#each sortedUniqueFeaturePropsSeen as [prop]}
 	function create_each_block_2(component, ctx) {
 		var option, text_value = ctx.prop, text, option_value_value;
 
@@ -43598,7 +43622,7 @@
 		};
 	}
 
-	// (371:6) {#if featurePointSizeProp}
+	// (372:6) {#if featurePointSizeProp}
 	function create_if_block_11(component, ctx) {
 		var div, span, text1, input0, input0_updating = false, text2, input1, input1_updating = false;
 
@@ -43629,9 +43653,9 @@
 				div = createElement("div");
 				span = createElement("span");
 				span.textContent = "Point size (px):";
-				text1 = createText("\r\n          ");
+				text1 = createText("\n          ");
 				input0 = createElement("input");
-				text2 = createText("\r\n          ");
+				text2 = createText("\n          ");
 				input1 = createElement("input");
 				setStyle(span, "flex", "0 0 auto");
 				setStyle(span, "margin-right", "5px");
@@ -43640,17 +43664,17 @@
 				addListener(input0, "keydown", keydown_handler);
 				setStyle(input0, "flex", "1 1 auto");
 				setStyle(input0, "width", "100%");
-				input0.className = "range_filter svelte-1nauac9";
+				input0.className = "range_filter svelte-dxs03o";
 				setAttribute(input0, "type", "text");
 				input0.placeholder = "min";
 				addListener(input1, "input", input1_input_handler);
 				addListener(input1, "keydown", keydown_handler_1);
 				setStyle(input1, "flex", "1 1 auto");
 				setStyle(input1, "width", "100%");
-				input1.className = "range_filter svelte-1nauac9";
+				input1.className = "range_filter svelte-dxs03o";
 				setAttribute(input1, "type", "text");
 				input1.placeholder = "max";
-				div.className = "property_selector hideOnMobile svelte-1nauac9";
+				div.className = "property_selector hideOnMobile svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -43686,7 +43710,7 @@
 		};
 	}
 
-	// (380:4) {#if !(featureProp && featurePropCount != null)}
+	// (381:4) {#if !(featureProp && featurePropCount != null)}
 	function create_if_block_9(component, ctx) {
 		var text;
 
@@ -43707,7 +43731,7 @@
 		};
 	}
 
-	// (385:4) {#if sortedUniqueFeaturePropsSeen.length > 0 && displayToggles.clustering > 0}
+	// (386:4) {#if sortedUniqueFeaturePropsSeen.length > 0 && displayToggles.clustering > 0}
 	function create_if_block_8(component, ctx) {
 		var div, span, text_1, select, option, select_updating = false;
 
@@ -43731,7 +43755,7 @@
 				div = createElement("div");
 				span = createElement("span");
 				span.textContent = "Cluster features by";
-				text_1 = createText("\r\n        ");
+				text_1 = createText("\n        ");
 				select = createElement("select");
 				option = createElement("option");
 
@@ -43804,7 +43828,7 @@
 		};
 	}
 
-	// (390:10) {#each sortedUniqueFeaturePropsSeen as [prop]}
+	// (391:10) {#each sortedUniqueFeaturePropsSeen as [prop]}
 	function create_each_block_1$1(component, ctx) {
 		var option, text_value = ctx.prop, text, option_value_value;
 
@@ -43841,7 +43865,7 @@
 		};
 	}
 
-	// (398:4) {#if featureProp && featurePropValueCounts}
+	// (399:4) {#if featureProp && featurePropValueCounts}
 	function create_if_block_7(component, ctx) {
 		var div, featureproptopvalues_updating = {};
 
@@ -43884,7 +43908,7 @@
 			c() {
 				div = createElement("div");
 				featureproptopvalues._fragment.c();
-				div.className = "hideOnMobile svelte-1nauac9";
+				div.className = "hideOnMobile svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -43920,7 +43944,7 @@
 		};
 	}
 
-	// (415:6) {#if featuresInViewport.length}
+	// (416:6) {#if featuresInViewport.length}
 	function create_if_block_6(component, ctx) {
 		var tr, td0, td1, text_1_value = ctx.featuresInViewport.length, text_1;
 
@@ -43954,7 +43978,7 @@
 		};
 	}
 
-	// (418:6) {#if numFeatureTagsInViewport != null}
+	// (419:6) {#if numFeatureTagsInViewport != null}
 	function create_if_block_5(component, ctx) {
 		var tr, td0, td1, text_1;
 
@@ -43988,7 +44012,7 @@
 		};
 	}
 
-	// (428:6) {:else}
+	// (429:6) {:else}
 	function create_else_block_2(component, ctx) {
 		var i;
 
@@ -44012,7 +44036,7 @@
 		};
 	}
 
-	// (426:6) {#if tagFilterList.length > 0}
+	// (427:6) {#if tagFilterList.length > 0}
 	function create_if_block_4(component, ctx) {
 		var text_value = ctx.tagFilterList.join(', '), text, br0, br1;
 
@@ -44045,7 +44069,7 @@
 		};
 	}
 
-	// (442:6) {:else}
+	// (443:6) {:else}
 	function create_else_block_1(component, ctx) {
 		var text;
 
@@ -44066,7 +44090,7 @@
 		};
 	}
 
-	// (440:6) {#if tagFilterViewport}
+	// (441:6) {#if tagFilterViewport}
 	function create_if_block_3(component, ctx) {
 		var text;
 
@@ -44087,7 +44111,7 @@
 		};
 	}
 
-	// (449:6) {:else}
+	// (450:6) {:else}
 	function create_else_block$1(component, ctx) {
 		var text;
 
@@ -44108,7 +44132,7 @@
 		};
 	}
 
-	// (447:6) {#if tagFilterAt}
+	// (448:6) {#if tagFilterAt}
 	function create_if_block_2$4(component, ctx) {
 		var text;
 
@@ -44129,7 +44153,7 @@
 		};
 	}
 
-	// (465:6) {#each tagDisplayList.slice(0, 500) as tag (JSON.stringify(tag))}
+	// (466:6) {#each tagDisplayList.slice(0, 500) as tag (JSON.stringify(tag))}
 	function create_each_block$4(component, key_1, ctx) {
 		var label, input, input_value_value, text0, text1_value = ctx.tag[1], text1, text2, text3_value = ctx.tag[0], text3, text4, br;
 
@@ -44145,11 +44169,11 @@
 			c() {
 				label = createElement("label");
 				input = createElement("input");
-				text0 = createText("\r\n          (");
+				text0 = createText("\n          (");
 				text1 = createText(text1_value);
 				text2 = createText("x) ");
 				text3 = createText(text3_value);
-				text4 = createText("\r\n        ");
+				text4 = createText("\n        ");
 				br = createElement("br");
 				component._bindingGroups[1].push(input);
 				addListener(input, "change", input_change_handler);
@@ -44204,7 +44228,7 @@
 		};
 	}
 
-	// (473:6) {#if tagDisplayList.length > 500}
+	// (474:6) {#if tagDisplayList.length > 500}
 	function create_if_block_1$5(component, ctx) {
 		var i, text0, text1_value = ctx.tagDisplayList.length, text1, text2;
 
@@ -44237,7 +44261,7 @@
 		};
 	}
 
-	// (480:2) {#if spaceInfo && spaceInfo.properties}
+	// (481:2) {#if spaceInfo && spaceInfo.properties}
 	function create_if_block$5(component, ctx) {
 		var div, propertysearchlist_updating = {};
 
@@ -44269,7 +44293,7 @@
 				div = createElement("div");
 				propertysearchlist._fragment.c();
 				div.id = "properties";
-				div.className = "panel hideOnMobile svelte-1nauac9";
+				div.className = "panel hideOnMobile svelte-dxs03o";
 			},
 
 			m(target, anchor) {
@@ -44638,6 +44662,8 @@
 	  window.scene = scene;  // debugging
 	}
 	function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clusteringProp, quadRez, quadCountmode, voronoi, delaunay } = {}, propertySearchQueryParams, basemap, hexbinInfo, gisInfo, projection }, scene_config) {
+	  const hubApi = appUI.get().hubApi || 'http://localhost:8080/hub';
+
 
 	  if (spaceId) {
 	    // choose main space, or hexbins space
@@ -44686,7 +44712,7 @@
 	    scene_config.sources = scene_config.sources || {};
 	    scene_config.sources._xyzspace = {
 	      type: 'GeoJSON',
-	      url: `http://localhost:8080/hub/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
+	      url: `{hubApi}/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
 	      url_params: {
 	        clip: true
 	      }      
@@ -44823,6 +44849,7 @@
 
 	function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: { hexbins } = {} }, scene_config) {
 	  // choose selected main space tags, or hexbin-specific tag
+	  const hubApi = AppUI.get().hubApi;
 	  let activeTags = tagFilterQueryParam;
 	  var currentZoom = scene.view.tile_zoom; // or map.getZoom() ?
 	  if (hexbins === 1 & Object.keys(hexbinInfo).length > 0) { // ensure hexbins info exists
@@ -44838,7 +44865,7 @@
 	    }
 	    else if (currentZoom > hexbinZoomMax) {
 	      // when you zoom in past hexbinZoomMax, maybe we want show the raw points? but showing hexbinZoomMax right now
-	//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+	//       scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
 	//       activeTags = tagFilterQueryParam;
 	      activeTags = 'zoom' + hexbinZoomMax + '_hexbin';
 
@@ -44846,7 +44873,7 @@
 	    }
 	    else if (currentZoom < hexbinZoomMin) {
 	      // what should we do when we zoom out beyond the hexbinZoomMin? imagine 10 million points. show hexbinZoomMin for now
-	//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+	//       scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
 	      activeTags = 'zoom' + hexbinZoomMin + '_hexbin'; // if in hexbin mode and zoomed way out, show what we've got
 	      console.log("beyond hexbin range, showing widest");
 	    }
@@ -44866,13 +44893,13 @@
 	    }
 	    else if (overZoom > hexbinZoomMax) {
 	      // when you zoom in past hexbinZoomMax, switch from centroids to raw points, need to switch back to original space (is this the best way?)
-	      scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+	      scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
 	      activeTags = tagFilterQueryParam;
 	      console.log(overZoom,">",hexbinZoomMax);
 	    }
 	    else if (overZoom < hexbinZoomMin) {
 	      // what should we do when we zoom out beyond the hexbinZoomMin? imagine 10 million points. show hexbinZoomMin for now
-	//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+	//       scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
 	      activeTags = 'zoom' + hexbinZoomMin + '_centroid'; // if in hexbin mode and zoomed way out, show what we've got
 	      console.log("beyond hexbin range, showing widest");
 	    }
@@ -44891,8 +44918,9 @@
 	}
 
 	async function getStats({ spaceId, token, mapStartLocation }) {
+	  const hubApi = AppUI.get().hubApi;
 	  // Get stats endpoint
-	  var url = `http://localhost:8080/hub/spaces/${spaceId}/statistics`;
+	  var url = `{hubApi}/spaces/${spaceId}/statistics`;
 	  const stats = await fetch(url).then(r => r.json());
 	    // console.log(stats)
 	  if (stats.type == 'ErrorResponse'){
@@ -44978,7 +45006,7 @@
 	      }, {});
 
 	  // Get space endpoint
-	  var spaceURL = `http://localhost:8080/hub/spaces/${spaceId}?`;
+	  var spaceURL = `${hubApi}/spaces/${spaceId}?`;
 	  const spaceInfo = await fetch(spaceURL).then((response) => response.json());
 	  console.log(spaceInfo);
 	  var tokenCapabilities = {"hexbinClustering": true, "quadClustering": true};
@@ -44994,7 +45022,7 @@
 	  if (spaceInfo.client) {
 	    if (spaceInfo.client.hexbinSpaceId) {
 	      hexbinInfo.spaceId = spaceInfo.client.hexbinSpaceId;
-	      const hexbinSpaceURL = `http://localhost:8080/hub/spaces/${hexbinInfo.spaceId}?access_token=${token}`;
+	      const hexbinSpaceURL = `${hubApi}/spaces/${hexbinInfo.spaceId}?access_token=${token}`;
 	      console.log(hexbinSpaceURL);
 	      try {
 	        const hexbinSpaceInfo = await fetch(hexbinSpaceURL).then((response) => response.json());

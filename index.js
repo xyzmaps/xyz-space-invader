@@ -237,6 +237,8 @@ function makeLayer(scene_obj) {
   window.scene = scene;  // debugging
 }
 function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clusteringProp, quadRez, quadCountmode, voronoi, delaunay } = {}, propertySearchQueryParams, basemap, hexbinInfo, gisInfo, projection }, scene_config) {
+  const hubApi = appUI.get().hubApi || 'http://localhost:8080/hub'
+
 
   if (spaceId) {
     // choose main space, or hexbins space
@@ -285,7 +287,7 @@ function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clu
     scene_config.sources = scene_config.sources || {};
     scene_config.sources._xyzspace = {
       type: 'GeoJSON',
-      url: `http://localhost:8080/hub/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
+      url: `{hubApi}/spaces/${activeSpaceId}/tile/web/{z}_{x}_{y}?${propertySearch}`,
       url_params: {
         clip: true
       }      
@@ -422,6 +424,7 @@ function applyDisplayOptions(uiState, scene_config) {
 
 function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: { hexbins } = {} }, scene_config) {
   // choose selected main space tags, or hexbin-specific tag
+  const hubApi = AppUI.get().hubApi;
   let activeTags = tagFilterQueryParam;
   var currentZoom = scene.view.tile_zoom; // or map.getZoom() ?
   if (hexbins === 1 & Object.keys(hexbinInfo).length > 0) { // ensure hexbins info exists
@@ -437,7 +440,7 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
     }
     else if (currentZoom > hexbinZoomMax) {
       // when you zoom in past hexbinZoomMax, maybe we want show the raw points? but showing hexbinZoomMax right now
-//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+//       scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
 //       activeTags = tagFilterQueryParam;
       activeTags = 'zoom' + hexbinZoomMax + '_hexbin';
 
@@ -445,7 +448,7 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
     }
     else if (currentZoom < hexbinZoomMin) {
       // what should we do when we zoom out beyond the hexbinZoomMin? imagine 10 million points. show hexbinZoomMin for now
-//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+//       scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
       activeTags = 'zoom' + hexbinZoomMin + '_hexbin'; // if in hexbin mode and zoomed way out, show what we've got
       console.log("beyond hexbin range, showing widest")
     }
@@ -465,13 +468,13 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
     }
     else if (overZoom > hexbinZoomMax) {
       // when you zoom in past hexbinZoomMax, switch from centroids to raw points, need to switch back to original space (is this the best way?)
-      scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+      scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
       activeTags = tagFilterQueryParam;
       console.log(overZoom,">",hexbinZoomMax);
     }
     else if (overZoom < hexbinZoomMin) {
       // what should we do when we zoom out beyond the hexbinZoomMin? imagine 10 million points. show hexbinZoomMin for now
-//       scene_config.sources._xyzspace.url = `http://localhost:8080/hub/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
+//       scene_config.sources._xyzspace.url = `${hubApi}/spaces/${spaceId}/tile/web/{z}_{x}_{y}`;
       activeTags = 'zoom' + hexbinZoomMin + '_centroid'; // if in hexbin mode and zoomed way out, show what we've got
       console.log("beyond hexbin range, showing widest")
     }
@@ -490,8 +493,9 @@ function applyTags({ spaceId, tagFilterQueryParam, hexbinInfo, displayToggles: {
 }
 
 async function getStats({ spaceId, token, mapStartLocation }) {
+  const hubApi = AppUI.get().hubApi;
   // Get stats endpoint
-  var url = `http://localhost:8080/hub/spaces/${spaceId}/statistics`;
+  var url = `{hubApi}/spaces/${spaceId}/statistics`;
   const stats = await fetch(url).then(r => r.json());
     // console.log(stats)
   if (stats.type == 'ErrorResponse'){
@@ -577,7 +581,7 @@ async function getStats({ spaceId, token, mapStartLocation }) {
       }, {});
 
   // Get space endpoint
-  var spaceURL = `http://localhost:8080/hub/spaces/${spaceId}?`;
+  var spaceURL = `${hubApi}/spaces/${spaceId}?`;
   const spaceInfo = await fetch(spaceURL).then((response) => response.json());
   console.log(spaceInfo)
   var tokenCapabilities = {"hexbinClustering": true, "quadClustering": true}
@@ -593,7 +597,7 @@ async function getStats({ spaceId, token, mapStartLocation }) {
   if (spaceInfo.client) {
     if (spaceInfo.client.hexbinSpaceId) {
       hexbinInfo.spaceId = spaceInfo.client.hexbinSpaceId;
-      const hexbinSpaceURL = `http://localhost:8080/hub/spaces/${hexbinInfo.spaceId}?access_token=${token}`;
+      const hexbinSpaceURL = `${hubApi}/spaces/${hexbinInfo.spaceId}?access_token=${token}`;
       console.log(hexbinSpaceURL)
       try {
         const hexbinSpaceInfo = await fetch(hexbinSpaceURL).then((response) => response.json());

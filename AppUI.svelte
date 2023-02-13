@@ -22,7 +22,8 @@
           {/if}
         </div>
       {:elseif !spaceLoading}
-        <input type="text" placeholder="enter an XYZ space ID" bind:value='spaceId'>
+      <input type="text" placeholder="XYZ API host url" bind:value='hubApi'>
+      <input type="text" placeholder="enter an XYZ space ID" bind:value='spaceId'>
         <button on:click="updateSpace(true)">Show XYZ Space</button>
       {/if}
     </div>
@@ -522,6 +523,7 @@ export default {
     return {
       // set these to empty strings (not null) to get placeholder text in input
       spaceId: '',
+      hubApi: 'http://localhost:8080/hub',
       token: '',
       spaceInfo: null,
       hexbinInfo: {},
