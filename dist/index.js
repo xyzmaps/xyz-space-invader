@@ -38837,6 +38837,7 @@
 	function queryParams({
 	    spaceId, token, basemap, projection,
 	    demoMode,
+	    hubApi,
 	    displayToggles,
 	    featureProp,
 	    featurePropValue,
@@ -38867,6 +38868,8 @@
 	  params.set('projection', projection);
 
 	  params.set('demo', demoMode ? 1 : 0);
+
+	  params.set('hubApi', hubApi);
 
 	  for(const p in displayToggles) {
 	    if (displayToggles[p] != null) {
@@ -38991,6 +38994,7 @@
 	    const spaceId = params.space || '';
 	    const token = '';
 	    const demoMode = (parseInt(params.demo) === 1);
+	    const hubApi = params.hubApi || 'http://localhost:8080/hub';
 
 	    // parse out display option toggles
 	    const displayToggles = {};
@@ -39087,6 +39091,7 @@
 	      basemap,
 	      projection,
 	      demoMode,
+	      hubApi,
 	      displayToggles,
 	      featureProp,
 	      featurePropValue,
@@ -44327,7 +44332,7 @@
 		init(this, options);
 		this._state = assign(assign({ Object : Object, JSON : JSON }, data$5()), options.data);
 
-		this._recompute({ basemap: 1, projection: 1, displayToggles: 1, featurePropMin: 1, featurePropMinFilterInput: 1, featurePropMax: 1, featurePropMaxFilterInput: 1, feature: 1, featurePropPaletteName: 1, featuresInViewport: 1, featurePointSizeProp: 1, featurePointSizePropStats: 1, featurePointSizeDisplayRange: 1, featurePropValueCounts: 1, featurePropValueSort: 1, featurePropMinFilter: 1, featurePropMaxFilter: 1, featurePropPalette: 1, featurePropPaletteFlip: 1, vizHelpers: 1, featureProp: 1, featurePropTypesCache: 1, featurePropNumericThreshold: 1, tagSort: 1, tagsWithCountsInViewport: 1, uniqueFeaturePropsSeen: 1, tagFilterList: 1, tagFilterViewport: 1, tagFilterAt: 1, tagFilterSearch: 1, uniqueTagsSeen: 1, tagFilterAndOr: 1, propertySearch: 1, spaceId: 1, token: 1, demoMode: 1, featurePropValue: 1, featurePropRangeFilter: 1, featurePropHideOutliers: 1, tagFilterQueryParam: 1 }, this._state);
+		this._recompute({ basemap: 1, projection: 1, displayToggles: 1, featurePropMin: 1, featurePropMinFilterInput: 1, featurePropMax: 1, featurePropMaxFilterInput: 1, feature: 1, featurePropPaletteName: 1, featuresInViewport: 1, featurePointSizeProp: 1, featurePointSizePropStats: 1, featurePointSizeDisplayRange: 1, featurePropValueCounts: 1, featurePropValueSort: 1, featurePropMinFilter: 1, featurePropMaxFilter: 1, featurePropPalette: 1, featurePropPaletteFlip: 1, vizHelpers: 1, featureProp: 1, featurePropTypesCache: 1, featurePropNumericThreshold: 1, tagSort: 1, tagsWithCountsInViewport: 1, uniqueFeaturePropsSeen: 1, tagFilterList: 1, tagFilterViewport: 1, tagFilterAt: 1, tagFilterSearch: 1, uniqueTagsSeen: 1, tagFilterAndOr: 1, propertySearch: 1, spaceId: 1, token: 1, demoMode: 1, hubApi: 1, featurePropValue: 1, featurePropRangeFilter: 1, featurePropHideOutliers: 1, tagFilterQueryParam: 1 }, this._state);
 		this._bindingGroups = [[], []];
 		this._intro = true;
 
@@ -44430,7 +44435,7 @@
 			if (this._differs(state.propertySearchQueryParams, (state.propertySearchQueryParams = propertySearchQueryParams(state)))) changed.propertySearchQueryParams = true;
 		}
 
-		if (changed.spaceId || changed.token || changed.basemap || changed.projection || changed.demoMode || changed.displayToggles || changed.featureProp || changed.featurePropValue || changed.featurePropPaletteName || changed.featurePropPaletteFlip || changed.featurePropRangeFilter || changed.featurePropMinFilterInput || changed.featurePropMaxFilterInput || changed.featurePropValueSort || changed.featurePropHideOutliers || changed.featurePointSizeProp || changed.featurePointSizeDisplayRange || changed.tagFilterQueryParam || changed.propertySearch) {
+		if (changed.spaceId || changed.token || changed.basemap || changed.projection || changed.demoMode || changed.hubApi || changed.displayToggles || changed.featureProp || changed.featurePropValue || changed.featurePropPaletteName || changed.featurePropPaletteFlip || changed.featurePropRangeFilter || changed.featurePropMinFilterInput || changed.featurePropMaxFilterInput || changed.featurePropValueSort || changed.featurePropHideOutliers || changed.featurePointSizeProp || changed.featurePointSizeDisplayRange || changed.tagFilterQueryParam || changed.propertySearch) {
 			if (this._differs(state.queryParams, (state.queryParams = queryParams(state)))) changed.queryParams = true;
 		}
 	};
@@ -44662,7 +44667,7 @@
 	  window.scene = scene;  // debugging
 	}
 	function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clusteringProp, quadRez, quadCountmode, voronoi, delaunay } = {}, propertySearchQueryParams, basemap, hexbinInfo, gisInfo, projection }, scene_config) {
-	  const hubApi = appUI.get().hubApi || 'http://localhost:8080/hub';
+	  const hubApi = appUI.get().hubApi;
 
 
 	  if (spaceId) {

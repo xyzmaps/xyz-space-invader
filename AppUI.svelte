@@ -835,6 +835,7 @@ export default {
     queryParams: ({
         spaceId, token, basemap, projection,
         demoMode,
+        hubApi,
         displayToggles,
         featureProp,
         featurePropValue,
@@ -865,6 +866,8 @@ export default {
       params.set('projection', projection);
 
       params.set('demo', demoMode ? 1 : 0);
+
+      params.set('hubApi', hubApi);
 
       for(const p in displayToggles) {
         if (displayToggles[p] != null) {
@@ -1053,6 +1056,7 @@ export default {
       const spaceId = params.space || '';
       const token = '';
       const demoMode = (parseInt(params.demo) === 1);
+      const hubApi = params.hubApi || 'http://localhost:8080/hub';
 
       // parse out display option toggles
       const displayToggles = {};
@@ -1149,6 +1153,7 @@ export default {
         basemap,
         projection,
         demoMode,
+        hubApi,
         displayToggles,
         featureProp,
         featurePropValue,

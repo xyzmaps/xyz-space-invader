@@ -237,7 +237,7 @@ function makeLayer(scene_obj) {
   window.scene = scene;  // debugging
 }
 function applySpace({ spaceId, token, displayToggles: { hexbins, clustering, clusteringProp, quadRez, quadCountmode, voronoi, delaunay } = {}, propertySearchQueryParams, basemap, hexbinInfo, gisInfo, projection }, scene_config) {
-  const hubApi = appUI.get().hubApi || 'http://localhost:8080/hub'
+  const hubApi = appUI.get().hubApi;
 
 
   if (spaceId) {
